@@ -96,6 +96,3 @@ Aqui um breve resumo de sua trajetória.
   - log <serviço>
   - current
 
-  ## Mais Informações
-
-  
