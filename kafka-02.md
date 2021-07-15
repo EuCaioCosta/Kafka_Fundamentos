@@ -69,7 +69,7 @@
 ou  
 ``` kafka-topics --zookeeper localhost:2181 -list ```  
 - Criar Tópicos  
-```kafka-topics --bootstrap-server localhost:9092 --topic <nomeTópico> --create \-- partitions 3 --replication-factor 1```
+```kafka-topics --bootstrap-server localhost:9092 --topic <nomeTópico> --create \ --partitions 3 --replication-factor 1```
 - Descrever Tópico  
 ``` kafka-topics --bootstrap-server localhost:9092 --topic <nomeTópico> --describe```
 - Deletar Tópico  
