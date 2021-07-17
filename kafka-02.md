@@ -74,3 +74,35 @@ ou
 ``` kafka-topics --bootstrap-server localhost:9092 --topic <nomeTópico> --describe```
 - Deletar Tópico  
 ``` kafka-topics --bootstrap-server localhost:9092 --topic <nomeTópico> --delete ```
+
+# Producer 
+
+## Linha de Comando
+
+### Producer Console
+
+- Enviar dados 
+  - ```kafka-console-producer --broker-list localhost:9092 --topic <nomeTópico>```
+- Enviar dados para todos reconhecerm (Leader e ISR)  
+  - ```kafka-console-producer --broker-list localhost:9092 --topic <nomeTópico> --producer-property acks=all```  
+
+# Consumer Linha de Comando  
+
+## Consumidor Console 
+
+- Receber mensagens em tempo real
+  - ```kafka-console-consumer -bootstrap-server localhost:9092 --topic <nomeTópico>```
+- Receber mensagens desde a criação do tópico  
+  - ```kafka-console-consumer -bootstrap localhost:9092 --topic <nomeTópico> --from-beginning```
+- Criar grupo de consumidores  
+  - ```kafka-console-consumer -bootstrap-server localhost:9092 --topic <nomeTópico> --group <nomeGrupo>```
+
+## Grupos de Consumidores - Console  
+
+- Listar os grupos  
+  - ```kafka-consumer-groups -bootstrap-server localhost:9092 --list```
+- Descrever grupo 
+  - ```kafka-consumer-groups -bootstrap-server localhost:9092 --describe --group <nomeGrupo>``` 
+- Redefinir o deslocamento do mais antigo 
+  - ```kafka-consumer-groups -bootstrap-sever localhost:9092 --group <nomeGrupo>\ --reset-offsets --to-earliest --execute --topic <nomeTópico>```
+  
