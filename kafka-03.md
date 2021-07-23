@@ -61,3 +61,38 @@
     - Fator de replicação -1
     - Mínimo de réplicas de sincronização -1 
 
+# KSQL 
+
+## KSQL Conceitos  
+
+- Engine de Streaming SQL do Kafka
+- Interface SQL interativa
+  - Facilidade de uso
+  - Focada para o processamento streaming no Kafka
+  - Sem a necessidade de escrever código em Java ou Python
+- Escalável
+- Tolerante a falhas
+- Tempo real 
+- Suporta várias operações de streaming
+  - Filtragem de dados
+  - Transformações 
+  - Agregações 
+
+## KSQL Acesso
+
+- Terminal
+  - ```docker exec -it ksqldb-cli bash```
+  - ```ksql```
+
+## Comandos Básicos
+
+- Visualizar os tópicos  
+  - ```list topics```
+- Mostrar conteúdo do tópico em tempo real
+  - ```print "<nomeTópico>" <propriedades>```  
+- Propriedades 
+
+>from beginning   
+       interval  
+       limit
+
